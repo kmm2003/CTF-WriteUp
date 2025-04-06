@@ -1,4 +1,4 @@
-# codegate 2025 - pew
+# pew
 
 키워드: Off-by-Null, UAF, pipe
 
