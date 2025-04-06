@@ -1,6 +1,6 @@
 # CCE2023
 
-## babyweb
+## WEB - babyweb
 
 ---
 
@@ -161,7 +161,7 @@ for pid in nginx_workers:
 cce2023{1e6b9e3691debe669ecd5626e7797ad4}
 ```
 
-## baby file manager
+## WEB - baby file manager
 
 ---
 
