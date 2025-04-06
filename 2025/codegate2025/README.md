@@ -6,7 +6,7 @@
 
 대상 CVE는 CVE-2021-22555입니다. Page UAF 취약점으로 KASLR 우회가 필요 없는 미친 공격기법이라고 하네요. WoW
 
-본 문제는 pew.ko 모듈에서 발생하는 **Off-by-one (Off-by-Null)** 취약점을 이용해 커널 권한 상승을 수행하는 CTF 문제입니다.
+해당 CVE를 트리거하기 위해서는 **Off-by-one (Off-by-Null)** 취약점이 필요합니다. 본 문제의 pew.ko 모듈에서는 **Off-by-one (Off-by-Null)** 취약점이 발생하므로 익스플로잇이 가능합니다.
 
 ## 📌 **Step 1: 드라이버 분석**
 
