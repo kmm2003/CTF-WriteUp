@@ -1,4 +1,4 @@
-# 🚩 Pwnable - pew
+# 🚩 PWN - pew
 
 키워드: Off-by-Null, UAF, pipe, file_struct
 
