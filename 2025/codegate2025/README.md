@@ -1,12 +1,10 @@
-# pew
+# 🚩 pew
 
 키워드: Off-by-Null, UAF, pipe
 
 전형적인 커널 익스 문제이며 CVE 취약점을 활용하는 문제입니다.
 
 대상 CVE는 CVE-2021-22555입니다. Page UAF 취약점으로 KASLR 우회가 필요 없는 미친 공격기법이라고 하네요. WoW
-
-# 🚩 **pew 문제 풀이**
 
 본 문제는 pew.ko 모듈에서 발생하는 **Off-by-one (Off-by-Null)** 취약점을 이용해 커널 권한 상승을 수행하는 CTF 문제입니다.
 
