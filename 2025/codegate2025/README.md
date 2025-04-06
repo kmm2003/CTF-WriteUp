@@ -1,6 +1,6 @@
 # 🚩 Pwnable - pew
 
-키워드: Off-by-Null, UAF, pipe
+키워드: Off-by-Null, UAF, pipe, file_struct
 
 전형적인 커널 익스 문제이며 CVE 취약점을 활용하는 문제입니다.
 
