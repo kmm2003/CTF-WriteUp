@@ -1,4 +1,4 @@
-# 🚩 Pwnable - PhysicalTest
+# 🚩 PWN - PhysicalTest
 
 키워드: UAF, file_struct, page, shellcode
 
