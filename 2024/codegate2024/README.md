@@ -55,7 +55,7 @@ __int64 __fastcall my_write(__int64 filp, __int64 usr_buf, unsigned __int64 size
 ```
 
 - 특정 조건(size > 0x700)을 만족하면 매핑된 페이지를 해제하고 `backing_vma`를 초기화합니다.
-- 이때 전역 변수 관리 미흡으로 인해 **다른 fd의 VMA**를 해제하게 되며, 정작 호출한 fd의 매핑은 UAF 상태로 남게 됩니다.
+- 이때 전역 변수 관리 미흡으로 인해 **다른 fd의 VMA**를 해제하게 되는 상황이 발생할 수 있습니다. 이 경우, 호출한 fd의 매핑은 UAF 상태로 남게 됩니다.
     - fd → fd2 순으로 open하고 fd를 해제하면 전역변수 backing_vma에는 fd2의 VMA가 저장된 상태이므로 fd의 VMA가 아닌 fd2의 VMA가 해제됨.
     - 따라서 fd의 VMA를 통해 fd의 해제된 page에 접근 가능함.
 
