@@ -209,7 +209,7 @@ struct pipe_buffer {
 
 ---
 
-## 📌 **Step 4: 최종 Exploit 코드**
+## 📌 **Step 4: exploit.c**
 
 ```c
 #define _GNU_SOURCE
