@@ -1,6 +1,6 @@
 # SSTF 2023 write up
 
-## BOF 101
+## PWN - BOF 101
 
 ---
 
@@ -59,7 +59,7 @@ p.sendlineafter(b'\n', payload)
 p.interactive()
 ```
 
-## BOF 102
+## PWN - BOF 102
 
 ---
 
@@ -118,7 +118,7 @@ p.sendlineafter(b'\n', payload)
 p.interactive()
 ```
 
-## BOF 103
+## PWN - BOF 103
 
 ---
 
@@ -176,7 +176,7 @@ p.sendlineafter(b'\n', payload)
 p.interactive()
 ```
 
-## BOF 104
+## PWN - BOF 104
 
 ---
 
@@ -246,7 +246,7 @@ p.sendline(payload)
 p.interactive()
 ```
 
-## **2 Outs in the Ninth Inning**
+## **PWN - 2 Outs in the Ninth Inning**
 
 ---
 
@@ -328,7 +328,7 @@ p.sendlineafter("> ", payload)
 p.interactive()
 ```
 
-## SQLi 101
+## WEB - SQLi 101
 
 ---
 
@@ -345,7 +345,7 @@ select id from users where id='1' and pw='1' union select 0x61646d696e#'
 
 위와 같이 로그인하면 된다.
 
-## SQLi 102
+## WEB - SQLi 102
 
 ---
 
@@ -359,7 +359,7 @@ select id from users where id='1' and pw='1' union select 0x61646d696e#'
 
 `union SQLi`를 수행하여 메타데이터에 정의된 column을 읽으면 FLAG를 획득할 수 있다.
 
-## XSS 101
+## WEB - XSS 101
 
 ---
 
@@ -375,7 +375,7 @@ XSS 페이로드로 admin의 `PHPSESSID`를 탈취한다.
 
 다음으로 `PHPSESSID`를 admin으로 바꾸고 `/admin.php`라는 숨은 경로에 접속하면 flag를 획득할 수 있다.
 
-## Libreria
+## WEB - Libreria
 
 ---
 
@@ -560,7 +560,7 @@ SCTF{SQL_i5_4_l4n9uage_t0_man4G3_d4ta_1n_Da7aba$e5}
 
 `+` 간단하게 sqlmap으로 풀 수 있는 문제였다는 사실에 충격 ㅠ
 
-## **Libreria Pro**
+## **WEB - Libreria Pro**
 
 ---
 
@@ -590,7 +590,7 @@ Django 디버그와 관련된 SQLi를 검색해보면
 
 `search_with=year` 뒤에 `‘`를 삽입하면 Django 디버그 페이지에서 소스 코드와 SQL 쿼리 문자열을 부분적으로 유출할 수 있다. 해당 문제는 SQLi 취약점이 있는 `Django 버전 4.0.5`를 사용한다. 따라서 필터를 우회하면서 Blind SQLi를 통해 데이터베이스에 저장된 데이터를 출력하여 플래그를 얻을 수 있다.
 
-## AES 101
+## Crypto - AES 101
 
 ---
 
