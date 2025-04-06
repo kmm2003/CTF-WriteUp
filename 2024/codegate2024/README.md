@@ -6,8 +6,6 @@
 
 본 문제는 전형적인 커널 익스플로잇 문제로, **Use-After-Free(UAF)**와 전역 변수 관리 부실로 인한 **VMA 충돌** 취약점을 이용하여 커널 메모리를 임의로 조작하고 권한을 상승시키는 것이 목표입니다.
 
-- 이 문제에 대한 분석은 솔버분들의 라이트업을 분석해서 작성했습니다.
-
 ## **📌** 코드 분석
 
 커널 모듈 `test.ko`는 `/dev/test` 디바이스를 통해 다음과 같은 동작을 수행합니다:
@@ -311,12 +309,4 @@ uid=0 gid=0
 ~ # cat /flag
 codegate2024{d4dc41e3e537cfadafcac5972701aa473a7feb8494964015d3253911106ab0a}
 ```
-
-## **📌** Reference
-
----
-
-[public-writeup/codegate2024/pwn_physicaltest at master · pwning/public-writeup](https://github.com/pwning/public-writeup/tree/master/codegate2024/pwn_physicaltest)
-
-[CTFWriteups/2024/Codegate CTF/PhysicalTest at 2024 · shift-crops/CTFWriteups](https://github.com/shift-crops/CTFWriteups/tree/2024/2024/Codegate%20CTF/PhysicalTest)
 
